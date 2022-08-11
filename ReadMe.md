@@ -159,3 +159,7 @@ int studentCount = 100;
 - bool - 8bit ( 1 byte )
 
 오로지 참과 거짓을 판별할 때 사용하는 자료형 입니다.
+
+---
+
+# Chapter 2 - 1
