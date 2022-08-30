@@ -4,13 +4,15 @@
 
 ## **목차**
 
+`목차의 내용을 선택 시 해당 항목으로 이동합니다.`
+
 <!--챕터 1-->
 <details>
 
 <summary><a href="#Chapter" > Chapter 1 </a></summary>
 
-<strong>[Chapter 1 - 1] C#의 기본</strong>
-<strong>[Chapter 1 - 2] 자료형</strong>
+<strong>[Chapter 1 - 1] [C#의 기본](#what-is-c)</strong> </br>
+<strong>[Chapter 1 - 2] [자료형](#자료형을-먼저-살펴-봅시다)</strong>
 
 </details>
 
@@ -19,7 +21,7 @@
 
 <summary><a href="#Chapter" > Chapter 2 </a></summary>
 
-<strong>[Chapter 2 - 1] 변수 </strong>
+<strong>[Chapter 2 - 1] 변수 </strong></br>
 <strong>[Chapter 2 - 2] 자료형 </strong>
 
 </details>
@@ -29,7 +31,7 @@
 
 <summary><a href="#Chapter" > Chapter 3 </a></summary>
 
-<strong>[Chapter 1 - 1] C#의 기본</strong>
+<strong>[Chapter 1 - 1] C#의 기본</strong></br>
 <strong>[Chapter 1 - 2] 자료형</strong>
 
 </details>
@@ -39,7 +41,7 @@
 
 <summary><a href="#Chapter" > Chapter 4 </a></summary>
 
-<strong>[Chapter 1 - 1] C#의 기본</strong>
+<strong>[Chapter 1 - 1] C#의 기본</strong></br>
 <strong>[Chapter 1 - 2] 자료형</strong>
 
 </details>
@@ -113,7 +115,7 @@ C#에 꼬리표 처럼 따라오는 <strong>객체지향성</strong> 입니다. 
 
 > C# 자료형을 알아봅시다.
 
-자료형을 먼저 살펴 봅시다.
+### 자료형을 먼저 살펴 봅시다.
 
 ## 1) <strong>정수형</strong>
 
