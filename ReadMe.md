@@ -11,7 +11,7 @@
 
 <summary><a href="#Chapter" > Chapter 1 </a></summary>
 
-<strong>[Chapter 1 - 1] [C#의 기본](#what-is-c)</strong> </br>
+<strong>[Chapter 1 - 1] [C#의 기본](#c의-기본과-객체지향에-대해-알아봅시다)</strong> </br>
 <strong>[Chapter 1 - 2] [자료형](#자료형을-먼저-살펴-봅시다)</strong>
 
 </details>
@@ -21,7 +21,7 @@
 
 <summary><a href="#Chapter" > Chapter 2 </a></summary>
 
-<strong>[Chapter 2 - 1] 변수 </strong></br>
+<strong>[Chapter 2 - 1] [변수](#변수에-대해-알아봅시다) </strong></br>
 <strong>[Chapter 2 - 2] 자료형 </strong>
 
 </details>
@@ -50,7 +50,7 @@
 
 # Chapter 1 - 1
 
-> C#의 기본과 객체지향에 대해 알아봅시다.
+##### `C#의 기본과 객체지향에 대해 알아봅시다.`
 
 ### What is C# ?
 
@@ -111,11 +111,11 @@ C#에 꼬리표 처럼 따라오는 <strong>객체지향성</strong> 입니다. 
 
 한마디로 사용하기 쉽게 <strong>"추상화"</strong> 한 것 입니다.
 
+---
+
 # Chapter 1 - 2
 
-> C# 자료형을 알아봅시다.
-
-### 자료형을 먼저 살펴 봅시다.
+##### `자료형을 먼저 살펴 봅시다.`
 
 ## 1) <strong>정수형</strong>
 
@@ -165,3 +165,124 @@ int studentCount = 100;
 ---
 
 # Chapter 2 - 1
+
+##### `변수에 대해 알아봅시다.`
+
+변수는 자료를 담는 그릇이자 이름표 입니다.
+
+```cs
+int a; //와 같이 int 자료형을 가진 변수 a를 생성
+a = 10; //a를 선언 후 값을 할당
+
+int b = 10; //와 같이 int 자료형을 가지고 10이라는 값을 가지고 있는 변수 b를 생성
+```
+
+변수를 선언하고 값을 할당하는 방법을 알아보았습니다.
+변수에 값을 배정하는 <strong>시점을 조절하여</strong> 프로그래밍 할수 있습니다. 값을 선언과 동시에 배정하여 사용할수 있고 선언 후 다음줄에서 배정 할 수도 있습니다.
+
+#### `문자열 과 문자 선언시`
+
+```cs
+char mark = '!';
+
+string name = "지뇽이";
+```
+
+문자로 할당된 곳은 ('') 작은 따옴표를 사용해서 값을 배정하지만 문자열은 ("") 큰따옴표를 사용해서 값을 배정하게 됩니다.
+
+## <strong>변수값 출력 방법</strong>
+
+우리는 선언한 변수를 확인하기 위해 출력해 볼 필요가 있습니다.
+C#에는 Console을 활용하여 출력이 가능합니다. C# 에는 두가지 출력문을 제시합니다. `write` 와 `writeLine` 입니다. 둘의 차이는 <strong>커서의 위치가 줄바꿈을 하냐, 하지 않느냐</strong> 입니다.
+
+```cs
+Console.Write("지뇽이"); //커서의 위치
+
+Console.WriteLine("지뇽이");
+//커서의 위치
+```
+
+---
+
+#### 그 다음 알아 볼 출력 방법은 <strong>PlaceHolder</strong> 와 <strong>Interpolation</strong> 입니다. Placeholder 에 대해 먼저 설명하겠습니다.
+
+#### <strong>`Placeholder`</strong>
+
+placeholder 를 적용한 출력 방법은 다음과 같습니다.
+
+```cs
+string name = "지뇽";
+Console.WriteLine("제 이름은 {0} 입니다.", name);
+```
+
+이렇게 `{숫자}`를 넣어서 출력으로 사용할 수 있습니다 `숫자`는 뒤따르는 , 다음의 변수중 몇 번째 변수 값을 가져올지 정합니다.
+첫번째가 1이 아닌 0으로 시작합니다.
+
+### `Placeholder 예제`
+
+```cs
+int x = 120;
+float y = 3.14;
+char z = 'A';
+
+///x,x,x 값 출력
+Console.WriteLine("{0} {0} {0}",x,y,z);
+// x,y,z 값 출력
+Console.WriteLine("{0} {1} {2}",x,y,z);
+//z,x,y 값 출력
+Console.WriteLine("{2} {0} {1}",x,y,z);
+```
+
+#### <strong>`Interpolation`</strong>
+
+interpolation 을 적용한 출력 방법은 다음과 같습니다.
+
+```cs
+string name = "지뇽";
+int age = 19;
+Console.WriteLine($"이름 = {name} 나이 = {age}");
+```
+
+이렇게 앞에 `$`를 쓰면 `{}`안에 변수명을 써주면 바로 변수의 값을 불러 올 수 있는 출력 방법 입니다.
+
+#### `Interpolation 예제`
+
+```cs
+int a = 1234;
+float A = 12.34;
+
+//소문자 a의 값을 출력
+Console.WriteLine($"a = {a}");
+
+//대문자 A의 값을 출력
+Console.WriteLine($"A = {A}");
+```
+
+## <strong>변수명 짓는 방법</strong>
+
+변수의 이름은 정말 중요합니다. 변수이름을 보고 어디에 어떻게 쓰이는 변수인지 한번에 알아차릴 수 있는 변수이름을 짓는것이 핵심입니다.
+이름을 지을 때 자신의 역활을 설명하도록 만들어야 하며 이는 변수 뿐만 아니라 상수, 함수, 클래스 등 여러가지에 적용됩니다.
+
+가장 일반적으로 사용하는 변수 이름을 짓는 3가지 규칙을 소개하겠습니다.
+
+##### 1. 변수명에는 줄임말보다 한번 보고 바로 이해할 수 있는 이름을 사용할 것.
+
+##### 2. 변수명에는 밑줄(\_)이나 하이픈(-)을 사용하지 말 것
+
+##### 3. 변수병에는 단수형 명사를 사용하고, 여러 단어의 조합인경우 camelCase를 사용할 것
+
+---
+
+#### `camelCase` 와 `PascalCase`
+
+`camelCase`는 주로 여러단어의 조합으로 된 변수의 이름에 사용된다.
+예시) userName, rankSystem, partyUser
+
+`PascalCase`는 주로 클래스나 인터페이스의 이름으로 사용되는데 첫번째와 띄어쓰기가 되는 부분이 둘다 대문자인 특성을 지니고 있다.
+예시) UserData, PlayerData, OnDamage
+
+---
+
+# Chapter 2 - 2
+
+##### `형 변환에 대해 알아봅시다.`
